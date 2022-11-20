@@ -2320,6 +2320,33 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ApplicationCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/ApplicationCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApplicationCore.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ApplicationCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -7448,10 +7475,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ApplicationCore/1.0.0": {
+      "type": "project",
+      "path": "../ApplicationCore/ApplicationCore.csproj",
+      "msbuildProject": "../ApplicationCore/ApplicationCore.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
@@ -7466,9 +7504,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\蘇柏瑜\\Desktop\\永慶\\interview\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\蘇柏瑜\\Desktop\\永慶\\interview\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\蘇柏瑜\\Desktop\\永慶\\interview\\WebApplication1\\WebApplication1\\inter.csproj",
+      "projectName": "inter",
+      "projectPath": "C:\\Users\\蘇柏瑜\\Desktop\\永慶\\interview\\WebApplication1\\WebApplication1\\inter.csproj",
       "packagesPath": "C:\\Users\\蘇柏瑜\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\蘇柏瑜\\Desktop\\永慶\\interview\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
@@ -7490,7 +7528,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\蘇柏瑜\\Desktop\\永慶\\interview\\WebApplication1\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\蘇柏瑜\\Desktop\\永慶\\interview\\WebApplication1\\Infrastructure\\Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
