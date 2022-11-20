@@ -21,7 +21,7 @@ namespace inter.Service
         }
         public async Task<Category> GetById(int? id)
         {
-            var category =await _categoryRepo.GetByIdAsync(id);
+            var category = _categoryRepo.FirstOrDefault(x=>x.CategoryId==id);
             return category;
         }
         public async Task Create(Category category)
@@ -38,7 +38,7 @@ namespace inter.Service
         }
         public bool Any(int id)
         {
-            return _categoryRepo.GetById(id) != null ;
+            return _categoryRepo.GetById<int?>(id) != null ;
         }
     }
 }
