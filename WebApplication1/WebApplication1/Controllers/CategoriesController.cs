@@ -13,7 +13,7 @@ namespace inter.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly NorthwindContext _context;
+        //private readonly NorthwindContext _context;
         private readonly CategoryService _CS;
 
         public CategoriesController(CategoryService cS)
@@ -21,10 +21,10 @@ namespace inter.Controllers
             _CS = cS;
         }
 
-        public CategoriesController(NorthwindContext context)
-        {
-            _context = context;
-        }
+        //public CategoriesController(NorthwindContext context)
+        //{
+        //    _context = context;
+        //}
 
         // GET: Categories
         public IActionResult Index()

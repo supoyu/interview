@@ -1,7 +1,11 @@
+using ApplicationCore.Interfaces;
 using Infrastructure;
+using Infrastructure.Data;
+using inter.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,8 +30,11 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            //services.AddDbContext<NorthwindContext>(options =>
-            //options.UseSqlServer(Configuration.GetConnectionString("NorthwindContext")));
+            services.AddDbContext<NorthwindContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("NorthwindContext")));
+            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped<CategoryService>();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

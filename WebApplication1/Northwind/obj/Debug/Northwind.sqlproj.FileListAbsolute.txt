@@ -4,3 +4,7 @@ C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\bin\Debug\
 C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\obj\Debug\Northwind.sqlproj.AssemblyReference.cache
 C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\obj\Debug\Northwind.dll
 C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\obj\Debug\Northwind.pdb
+C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\obj\Debug\Model.xml
+C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\obj\Debug\refactor.xml
+C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\obj\Debug\postdeploy.sql
+C:\Users\蘇柏瑜\Desktop\永慶\interview\WebApplication1\Northwind\obj\Debug\predeploy.sql
